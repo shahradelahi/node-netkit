@@ -1,0 +1,77 @@
+{
+  "name": "node-netkit",
+  "description": "Awesome utilities for working with network on Linux",
+  "version": "0.1.0-canary.0",
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "format:check": "prettier --check \"**/*.{ts,md}\"",
+    "format": "prettier --write .",
+    "prepublishOnly": "pnpm run format:check && pnpm run typecheck && pnpm run build"
+  },
+  "type": "module",
+  "packageManager": "pnpm@8.12.0",
+  "dependencies": {
+    "execa": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.5",
+    "@types/prompts": "^2.4.9",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "prettier": "^3.1.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "type-fest": "^4.8.2",
+    "typescript": "^5.3.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./ip": {
+      "import": {
+        "types": "./dist/ip.d.mts",
+        "default": "./dist/ip.mjs"
+      },
+      "require": {
+        "types": "./dist/ip.d.ts",
+        "default": "./dist/ip.js"
+      }
+    }
+  },
+  "author": "Shahrad Elahi <shahrad@litehex.com> (https://github.com/shahradelahi)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shahradelahi/node-netkit.git"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "network",
+    "ip",
+    "tun",
+    "route",
+    "linux",
+    "toolkit",
+    "node"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
