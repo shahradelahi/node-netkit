@@ -39,7 +39,7 @@ devDependencies:
     version: 4.7.0
   type-fest:
     specifier: ^4.8.2
-    version: 4.8.3
+    version: 4.10.3
   typescript:
     specifier: ^5.3.2
     version: 5.3.3
@@ -1438,8 +1438,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /type-fest@4.8.3:
-    resolution: {integrity: sha512-//BaTm14Q/gHBn09xlnKNqfI8t6bmdzx2DXYfPBNofN0WUybCEUDcbCWcTa0oF09lzLjZgPphXAsvRiMK0V6Bw==}
+  /type-fest@4.10.3:
+    resolution: {integrity: sha512-JLXyjizi072smKGGcZiAJDCNweT8J+AuRxmPZ1aG7TERg4ijx9REl8CNhbr36RV4qXqL1gO1FF9HL8OkVmmrsA==}
     engines: {node: '>=16'}
     dev: true
 
