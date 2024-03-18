@@ -11,7 +11,7 @@
     "prepublishOnly": "pnpm run format:check && pnpm run typecheck && pnpm run build"
   },
   "type": "module",
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.15.5",
   "dependencies": {
     "execa": "^8.0.1"
   },
