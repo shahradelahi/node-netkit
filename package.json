@@ -58,6 +58,16 @@
         "types": "./dist/ip/index.d.cts",
         "default": "./dist/ip/index.cjs"
       }
+    },
+    "./netstat": {
+      "import": {
+        "types": "./dist/netstat/index.d.ts",
+        "default": "./dist/netstat/index.js"
+      },
+      "require": {
+        "types": "./dist/netstat/index.d.cts",
+        "default": "./dist/netstat/index.cjs"
+      }
     }
   },
   "author": "Shahrad Elahi <shahrad@litehex.com> (https://github.com/shahradelahi)",

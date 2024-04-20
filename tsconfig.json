@@ -19,7 +19,9 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "node-netkit/*": ["dist/*"],
+      "node-netkit": ["dist/index.js"]
     },
     "outDir": "build"
   },
