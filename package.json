@@ -16,7 +16,8 @@
   "type": "module",
   "packageManager": "pnpm@8.15.0",
   "dependencies": {
-    "execa": "^8.0.1"
+    "execa": "^8.0.1",
+    "p-safe": "^0.1.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.14",

@@ -8,6 +8,9 @@ dependencies:
   execa:
     specifier: ^8.0.1
     version: 8.0.1
+  p-safe:
+    specifier: ^0.1.0
+    version: 0.1.0
 
 devDependencies:
   '@types/chai':
@@ -1580,6 +1583,10 @@ packages:
     dependencies:
       p-limit: 3.1.0
     dev: true
+
+  /p-safe@0.1.0:
+    resolution: {integrity: sha512-A3YWGGaKK++7P6zYbT6UeQOKrsmUVv8ypLTsKOPdBTEK7T7+yzJSjeiwreVPa9eH1XfRu+dvacvde5w7UslNcw==}
+    dev: false
 
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
