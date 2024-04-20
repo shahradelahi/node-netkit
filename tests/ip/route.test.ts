@@ -10,7 +10,5 @@ describe('List', () => {
 
     expect(defaultRoute).to.be.an('object');
     expect(defaultRoute).to.have.property('via');
-
-    console.log(defaultRoute);
   });
 });

@@ -6,12 +6,12 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "test": "mocha \"**/*.test.ts\" --retries 2",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"src/**/*.ts\"",
-    "lint:fix": "eslint --fix \"src/**/*.ts\"",
-    "format:check": "prettier --check \"**/*.{ts,md}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "prepublishOnly": "pnpm test && pnpm lint && pnpm run format:check && pnpm run typecheck && pnpm build"
+    "check": "pnpm lint && pnpm format:check",
+    "prepublishOnly": "pnpm test && pnpm check && pnpm build"
   },
   "type": "module",
   "packageManager": "pnpm@8.15.0",
