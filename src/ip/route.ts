@@ -1,4 +1,4 @@
-import { execaCommand } from 'execa';
+import { execShell } from '@/utils/exec-shell';
 
 interface RoutingTableEntry {
   destination: string; // e.g., "default" or "192.168.1.0/24"
@@ -11,9 +11,12 @@ interface RoutingTableEntry {
 }
 
 export async function list() {
-  const { stdout } = await execaCommand('ip route list');
+  const { error, data } = await execShell(['ip', 'route', 'list']);
+  if (error) {
+    throw error;
+  }
 
-  const lines = stdout.split('\n');
+  const lines = data.output.split('\n');
   const routes: RoutingTableEntry[] = [];
 
   for (const line of lines) {
