@@ -1,4 +1,31 @@
+import { del as linkDel } from './link';
+
+// ------------------------
+
 export * as route from './route';
+export * as link from './link';
+
+// ------------------------
+
+/**
+ * Drop Device
+ *
+ * Example:
+ * ```javascript
+ * await dropDevice('tun0');
+ * ```
+ *
+ * @param name "DEVICE_NAME" or "dev NAME" or "group NAME"
+ */
+export async function dropDevice(name: string) {
+  const { error } = await linkDel({
+    name,
+  });
+
+  if (error) {
+    throw error;
+  }
+}
 
 // ------------------------
 
@@ -6,6 +33,8 @@ export type IPFamily = 'IPv4' | 'IPv6';
 
 export const IPV4_REGEX = /^(\d{1,3}\.){3}\d{1,3}$/;
 export const IPV6_REGEX = /^(::)?(((\d{1,3}\.){3}(\d{1,3}){1})?([0-9a-f]){0,4}:{0,2}){1,8}(::)?$/i;
+
+export const MAC_REGEX = /^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$/;
 
 export function isValidIP(ip: string) {
   return isValidIPv4(ip) || isValidIPv6(ip);
@@ -149,4 +178,8 @@ export function* generateIP(cidr: string): Generator<string, void> {
   for (let i = 1; i < maxHosts - 1; i++) {
     yield fromLong(currentIP + i);
   }
+}
+
+export function isValidMacAddress(mac: string) {
+  return MAC_REGEX.test(mac);
 }
