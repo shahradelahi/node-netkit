@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    branches:
+      - canary
   pull_request:
 
 concurrency:
