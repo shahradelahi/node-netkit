@@ -1,7 +1,7 @@
 import { execShell } from '@/utils/exec-shell';
 import { isValidMacAddress } from '@/ip/index';
 
-export const LINK_TYPES = <const>[
+const LINK_TYPES = <const>[
   'amt',
   'bareudp',
   'bond',
@@ -108,7 +108,7 @@ export async function list(params: ListParams = {}): Promise<Link[]> {
   return links;
 }
 
-export function parseLink(line: string) {
+function parseLink(line: string) {
   if (!line) {
     return undefined;
   }
