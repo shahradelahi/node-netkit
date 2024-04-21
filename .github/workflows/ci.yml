@@ -44,6 +44,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18, 20]
+    name: node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -55,4 +56,5 @@ jobs:
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
+      - run: pnpm build
       - run: pnpm test
