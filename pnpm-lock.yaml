@@ -9,8 +9,8 @@ dependencies:
     specifier: ^8.0.1
     version: 8.0.1
   p-safe:
-    specifier: ^0.1.0
-    version: 0.1.0
+    specifier: ^1.0.0
+    version: 1.1.0
 
 devDependencies:
   '@types/chai':
@@ -1621,8 +1621,8 @@ packages:
       p-limit: 3.1.0
     dev: true
 
-  /p-safe@0.1.0:
-    resolution: {integrity: sha512-A3YWGGaKK++7P6zYbT6UeQOKrsmUVv8ypLTsKOPdBTEK7T7+yzJSjeiwreVPa9eH1XfRu+dvacvde5w7UslNcw==}
+  /p-safe@1.1.0:
+    resolution: {integrity: sha512-duJUW/A3IhIFpxtbuEXtPTwGL70XTGQtyF8DxLwcO8ZmQK2J2VdD1A8RQ1RvbDvfeV1pu+qP68mUB6wo2BH5Eg==}
     dev: false
 
   /parent-module@1.0.1:
